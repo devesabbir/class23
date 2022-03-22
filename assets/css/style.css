@@ -1,0 +1,21 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+ul, li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.css.map */

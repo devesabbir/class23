@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
+
+</head>
+<body>
+   <main>
+     <div class="container">
+          <div class="row">
+               <div class="col-lg-2"></div>
+               <div class="col-lg-8">
+                   <div class="card">
+                        <div class="card-body my-2">
+                             <h3 class="text-center text-uppercase">Add Student</h3>
+
+
+                         <form class="" id="add_form" method="POSt">
+                              <div class="my-2">
+                                   <label for="name">Name:</label>
+                                   <input  class="form-control" id="name" name="name" type="text">
+                              </div>
+                              <div class="my-2">
+                                   <label for="cel">Cel:</label>
+                                   <input  class="form-control"name="cel" id="cel" type="text">
+                              </div>
+                              <div class="my-2">
+                                   <label for="photo">Photo:</label>
+                                   <input class="form-control" name="photo" id="photo" type="text">
+                              </div>
+                               <div class="my-2">
+                                    <label for="location">Location:</label>
+                                   <input class="form-control" name="location" id="location" type="text">
+                              </div>
+ 
+                             <button class="btn w-100 my-2 bg-success text-white" type="submit">Submit</button>
+                         </form>
+                        </div>
+                   </div>
+               </div>
+               <div class="col-lg-2"></div>
+          </div>
+     </div>
+      <div class="container">
+            <div class="row">
+                  <div class="col-lg-2"></div>
+                  <div class="col-lg-8">
+                       <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                   <th>Sl</th>
+                                   <th>Name</th>
+                                   <th>Location</th>
+                                   <th>Photo</th>
+                                   <th>Action</th>
+                              </tr>
+                            </thead>
+                            <tbody id="loadData">
+                              
+                            </tbody>
+                       </table>
+                  </div>
+                  <div class="col-lg-2"></div>
+            </div>
+
+      </div>
+   </main>
+
+
+
+
+
+    <script src="./node_modules/bootstrap//dist//js/bootstrap.min.js"></script>
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
