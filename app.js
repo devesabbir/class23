@@ -1,6 +1,5 @@
 import Storage from "./src/Storage.js"
 
-
 const add_form = document.querySelector('#add_form')
 const loadData = document.querySelector('#loadData')
 

@@ -17,9 +17,6 @@ class Storage{
        localStorage.setItem(key,JSON.stringify(setData))
     }
 
-    static get(key){
-       return JSON.parse(this.has(key)) 
-    }
 }
 
 export default Storage;
