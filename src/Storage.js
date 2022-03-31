@@ -4,7 +4,6 @@ class Storage{
       return localStorage.getItem(key) ? localStorage.getItem(key) : false;
         
     }
-
   
     static set(key,data){
        let setData = [];

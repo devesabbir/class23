@@ -59,14 +59,3 @@ function getAlldata() {
 
 getAlldata()
 
-
-
-
-
-
-
-
-
-
-
-
