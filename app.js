@@ -1,4 +1,3 @@
-import Storage from "./src/Storage.js"
 
 const add_form = document.querySelector('#add_form')
 const loadData = document.querySelector('#loadData')
@@ -6,31 +5,43 @@ const loadData = document.querySelector('#loadData')
 
 add_form.addEventListener('submit', function (e) {
     e.preventDefault()
-    const form_data = new FormData(e.target)
-    const form_entry = Object.fromEntries(form_data.entries())
 
-    const {
+    let form_data = new FormData(e.target)
+    let form_entry = Object.fromEntries(form_data.entries())
+
+    let {
         name,
         cel,
         photo,
         location
     } = form_entry
 
+    let alldevs = []
+
     if (name == '' || cel == '' || photo == '' || location == '') {
         alert('All Feild Are Required !')
     } else {
+        
+       
+        if(localStorage.getItem('Devs')){
+            alldevs = JSON.parse(localStorage.getItem('Devs'))
+        }else{
+            alldevs = [] 
+        }
 
-        Storage.set('Devs', form_entry)
-        getAlldata()
+        alldevs.push(form_entry)
+
+        localStorage.setItem('Devs',JSON.stringify(alldevs))
         add_form.reset()
+        getAlldata()
     }
 })
 
 
 function getAlldata() {
-    let data = Storage.get('Devs')
+    let datas = JSON.parse(localStorage.getItem('Devs')) 
     let titem = '';
-    data.map((data, index) => {
+    datas.map((data, index) => {
         let {
             name,
             cel,

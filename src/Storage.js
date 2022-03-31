@@ -1,4 +1,4 @@
-class Storage{
+class Storage {
 
   static has(key){   
       return localStorage.getItem(key) ? localStorage.getItem(key) : false;
@@ -9,6 +9,8 @@ class Storage{
        let setData = [];
        if(this.has(key)){
          setData = JSON.parse(this.has(key))  
+       }else{
+         setData = []
        }
 
        setData.push(data)
