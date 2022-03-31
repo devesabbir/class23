@@ -54,7 +54,7 @@ function getAlldata() {
            <td>${index + 1}</td> 
            <td>${name}</td>
            <td>${cel}</td>
-           <td>${photo}</td>
+           <td><img src="${photo}" alt="image"></td>
            <td>${location}</td>
            <td>
              <button class="btn-close" onclick="alert(${ index })"></button>
